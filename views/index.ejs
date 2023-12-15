@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="whatsapp-background">
+
+    <h1>whatsapp apps</h1>
+
+  <input type="text" placeholder="enter message">
+  <button>send message</button>
+  <h3>here will be message</h3>
+
+  </div>
+ 
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+      var socket = io();
+      document.querySelector("button").addEventListener('click',(eve)=>{
+        // console.log(document.querySelector('input') .value)
+        socket.emit('message',document.querySelector('input').value)
+
+        socket.on('message',msg =>{
+          // console.log(msg);
+          document.querySelector('h3').textContent=msg
+        })
+      })
+  </script>
+</body>
+</html>
+
+  
+</body>
+</html>

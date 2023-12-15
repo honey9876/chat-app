@@ -1,0 +1,40 @@
+/* Resetting default styles */
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling the navigation */
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+.whatsapp-background {
+  height: 100vh; /* Full viewport height */
+  background-color: #f5f5f5; /* Light gray background color */
+  /* You can add a subtle texture or gradient here if desired */
+  /* Example texture: background-image: url('texture.png'); */
+  /* Example gradient: background-image: linear-gradient(to bottom, #f5f5f5, #e0e0e0); */
+  /* Adjust the background properties as needed */
+}
